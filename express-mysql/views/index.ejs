@@ -1,0 +1,25 @@
+     <%-  include('./layouts/header') %>
+     <%-  include('./layouts/navbar') %>
+     <a href="/add" class="btn btn-primary mt-5" >Tambah data +</a>
+     <table class="table">
+         <thead>
+              <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">Nama</th>
+                  <th scope="col">Umur</th>
+                  <th scope="col">Jenis Kelamin</th>
+                </tr>
+            </thead>
+            <tbody>
+              <% let i=1; biodata.forEach(data => { %>
+              <tr>
+                  <th scope="row"><%= i; %></th>
+                  <td><%= data.nama %></td>
+                  <td><%= data.umur %></td>
+                  <td><%= data.jk %></td>
+                </tr>
+              <% i++; }) %>
+            </tbody>
+        </table>
+        <%-  include('./layouts/footer') %>
+        

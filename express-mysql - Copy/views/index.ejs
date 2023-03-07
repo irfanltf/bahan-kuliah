@@ -1,0 +1,19 @@
+<%- include('layouts/header') %>
+<%- include('layouts/nav') %>
+<h1>Berikut adalah data user</h1>
+<table>
+    <tr>
+        <td>No</td>
+        <td>Nama User</td>
+        <td>Email</td>
+    </tr>
+    <% let i = 1; users.forEach( usr => { %>
+        <tr>
+            <td><%= i %></td>
+            <td><%= usr.name %></td>
+            <td><%= usr.email %></td>
+        </tr>
+        <% i++; %>
+        <% }) %>
+</table>
+<%- include('layouts/footer') %>
